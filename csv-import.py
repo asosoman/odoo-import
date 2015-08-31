@@ -131,7 +131,12 @@ def crear_atts_template(t):
     a_ids = []
     for v in t2att[t]:
         if v in att:
+            # print 'att', att
+            # print "t2att[t]", t2att[t]
+            # print "v", v
+            # print "att[v]", att[v]
             a_ids.append(att[v][0])
+            # print "a_ids", a_ids
         else:
             print "Error, no {v} en atts: {1}".format(v,att)
     d = {
