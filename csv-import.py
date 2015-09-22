@@ -11,7 +11,7 @@ import os
 from pprint import pprint
 
 ##GLOBAL VARIABLES
-default = {'name': '','default_code': '','ean13':'','standard_price': 0,'list_price':0,'is_product_variant': True}
+default = {'name': '','default_code': '','ean13':'','standard_price': 0,'list_price':0,'is_product_variant': True, 'type': 'product'}
 #templates : {template: [index de productes amb aquest template]}
 templates = {}
 #eans: {ean: {diccionari del row}}
@@ -131,12 +131,12 @@ def crear_atts_template(t):
     a_ids = []
     for v in t2att[t]:
         if v in att:
-            # print 'att', att
-            # print "t2att[t]", t2att[t]
-            # print "v", v
-            # print "att[v]", att[v]
+            print 'att', att
+            print "t2att[t]", t2att[t]
+            print "v", v
+            print "att[v]", att[v]
             a_ids.append(att[v][0])
-            # print "a_ids", a_ids
+            print "a_ids", a_ids
         else:
             print "Error, no {v} en atts: {1}".format(v,att)
     d = {
